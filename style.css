@@ -1,0 +1,87 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Fira Mono', monospace;
+  background: linear-gradient(120deg, #b2f7b8 0%, #a0e9f7 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 32px;
+  font-size: 2.5rem;
+  color: #1a237e;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  color: #1a237e;
+  margin-bottom: 24px;
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+
+#notes-container {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  max-width: 900px;
+}
+
+.note, .add-note {
+  width: 280px;
+  height: 160px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.25);
+  box-shadow: 0 4px 24px rgba(30,30,60,0.08);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(0,0,0,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: box-shadow 0.2s, border 0.2s;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  padding: 0 18px;
+  color: #222;
+  word-break: break-word;
+}
+
+.note {
+  background: linear-gradient(120deg, #ffe29f 0%, #ffa99f 100%);
+  border: 2px solid #ffd6a0;
+}
+
+.note:nth-child(3n) {
+  background: linear-gradient(120deg, #b2f7b8 0%, #a0e9f7 100%);
+  border: 2px solid #a0e9f7;
+}
+
+.note:nth-child(4n) {
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  border: 2px solid #c3e0fc;
+}
+
+.note:focus {
+  box-shadow: 0 0 0 3px #1a237e33;
+  border: 2px solid #1a237e;
+}
+
+.add-note {
+  background: rgba(255,255,255,0.35);
+  color: #6b6b6b;
+  font-size: 2.5rem;
+  justify-content: center;
+  border: 2px dashed #b2b2b2;
+  transition: background 0.2s, border 0.2s;
+}
+
+.add-note:hover {
+  background: rgba(255,255,255,0.5);
+  border: 2px solid #1a237e;
+  color: #1a237e;
+}
